@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+/* --------- common ---------- */
+html {
+    position: relative;
+    background:#f1efec;
+    padding-bottom: 80vh;
+    line-height: 1.4;
+    text-align: center;
+}
+html::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    background: url(../img/bg_cat.png) no-repeat bottom center / contain;
+    width: 100%;
+    height: 70vw;
+}
+body {
+    overflow-x: hidden;
+}
+
+/* --------- layout ---------- */
+#header {
+    position: relative;
+    padding: 20px;
+    color: #c1b9b4;
+    font-size: 1rem;
+    text-align: left;
+}
+#contents {
+    position: relative;
+    z-index: 1;
+    max-width: 840px;
+    margin: auto;
+    line-height: 1.4;
+}
+
+/* --------- profileField ---------- */
+.profileField {
+    position: relative;
+    padding: 60px 0 30px;
+}
+.profileField::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -10vw;
+    top: 0;
+    bottom: -50px;
+    width: 120vw;
+    background:#fff;
+    transform: rotate(-5deg);
+    z-index: 0;
+}
+.profileBox {
+    position: relative;
+    z-index: 1;
+}
+.profileBox .imageBox {
+    background: rgba(224, 201, 156, 0.3);
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.profileBox .imageBox img {
+    width: 60%;
+}
+.profileBox .text {
+    margin: 10px 20px 0;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+.profileBox .text span {
+    display: inline-block;
+}
+
+/* --------- works ---------- */
+.works {
+    position: relative;
+    z-index: 1;
+}
+.skillBox {
+    background: #c1b9b4;
+    max-width: 350px;
+    margin: 0 auto 40px;
+    padding: 20px 0;
+    color: #fff;
+    border-radius: 5px;
+}
+.skillBox .skillList div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skillBox .skillList div + div {
+    margin-top: 10px;
+}
+.skillBox .skillList dd {
+    margin-left: 15px;
+}
+.balloonField {
+    position: relative;
+}
+.balloonBox {
+    display: flex;
+    margin-top: 10px;
+}
+.balloonBox:nth-of-type(2) {
+    justify-content: flex-end;
+}
+.balloon {
+    position: relative;
+    max-width: 300px;
+    padding: 50px;
+}
+.balloon::before,
+.balloon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
+}
+.balloon::before {
+    background: #fff;
+}
+.balloon::after {
+    bottom: -5px;
+    right: -5px;
+    border: 2px solid #fff;
+    transform: rotate(-2deg);
+}
+.balloonBox:nth-of-type(2) .balloon::before,
+.balloonBox:nth-of-type(2) .balloon::after {
+    transform: scale(-1, 1);
+}
+.balloon .title,
+.balloon .text {
+    position: relative;
+    z-index: 2;
+}
+.balloon .text {
+    margin-top: 5px;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
